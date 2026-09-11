@@ -6,4 +6,6 @@ I hope you enjoy my dog's dumb expressions as much as I do.
 
 I’d also like to make an Android version eventually, so yeah— 
 
-Get and play it here: https://beetssu.itch.io/whatdoyouwantfrommegoddamnit
+Get and play it here:
+
+<iframe frameborder="0" src="https://itch.io/embed/4972398" width="552" height="167"><a href="https://beetssu.itch.io/whatdoyouwantfrommegoddamnit">What-Do-You-Want-From-Me-Goddamnit by Beetssu</a></iframe>
