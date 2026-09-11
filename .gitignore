@@ -1,3 +1,18 @@
-# Godot 4+ specific ignores
+# Godot
 .godot/
-/android/
+
+# C# / .NET
+.vs/
+.vscode/
+bin/
+obj/
+
+# Windows
+desktop.ini
+Thumbs.db
+
+# Godot Android export/build
+android/
+
+# OS
+.DS_Store
