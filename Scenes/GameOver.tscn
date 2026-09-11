@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dkfu64323pcly"]
+
+[ext_resource type="Script" uid="uid://4ule5birdr23" path="res://Scripts/GameOver.cs" id="1_m5628"]
+
+[node name="GameOver" type="Node2D" unique_id=288361183]
+script = ExtResource("1_m5628")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=103263714]
+modulate = Color(0.69307107, 0.65676576, 0.9036419, 0.46666667)
+offset_left = -280.0
+offset_top = -344.0
+offset_right = 280.0
+offset_bottom = 256.0
+
+[node name="RestartButton" type="Button" parent="." unique_id=1237810011]
+offset_left = -160.0
+offset_top = -24.0
+offset_right = 160.0
+offset_bottom = 88.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Restart
+"
+
+[node name="MenuButton" type="Button" parent="." unique_id=1378379446]
+offset_left = -216.0
+offset_top = 104.0
+offset_right = 216.0
+offset_bottom = 216.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Main Menu
+"
+
+[node name="Label" type="Label" parent="." unique_id=169844163]
+offset_left = -192.0
+offset_top = -112.0
+offset_bottom = -57.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 40
+text = "Score:"
+vertical_alignment = 1
+
+[node name="ScoreText" type="RichTextLabel" parent="Label" unique_id=914884145]
+layout_mode = 0
+offset_left = 279.0
+offset_top = -1.0
+offset_right = 447.0
+offset_bottom = 55.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 16
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="highScore" type="Label" parent="." unique_id=1311144601]
+offset_left = -192.0
+offset_top = -184.0
+offset_right = 12.0
+offset_bottom = -129.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 40
+text = "Highscore:"
+vertical_alignment = 1
+
+[node name="HighscoreText" type="RichTextLabel" parent="highScore" unique_id=1902960741]
+layout_mode = 0
+offset_left = 279.0
+offset_right = 447.0
+offset_bottom = 56.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 16
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label2" type="RichTextLabel" parent="." unique_id=746081728]
+offset_left = -176.0
+offset_top = -304.0
+offset_right = 176.0
+offset_bottom = -216.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[pulse freq=0.3 color=white]Game Over "

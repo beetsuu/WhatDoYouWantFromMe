@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://82ovl3gtlaj7"]
+
+[ext_resource type="Script" uid="uid://cb4o53lsv7gfx" path="res://Scripts/TopUi.cs" id="1_opq4f"]
+
+[node name="TopUI" type="Node2D" unique_id=1990375870 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_opq4f")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=1471726653]
+wait_time = 5.0
+
+[node name="TimerText" type="RichTextLabel" parent="." unique_id=1898630097]
+offset_left = 536.0
+offset_right = 648.0
+offset_bottom = 88.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreText" type="RichTextLabel" parent="." unique_id=1964603705]
+offset_right = 112.0
+offset_bottom = 87.0
+theme_override_colors/default_color = Color(0, 0.012617188, 0.012617188, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 16
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="onTimerTimeout"]

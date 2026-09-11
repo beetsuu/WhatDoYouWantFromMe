@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://bxahk0l6eh36l"]
+
+[ext_resource type="Script" uid="uid://c6lcbnv33gfkk" path="res://Scripts/MainMenu.cs" id="1_853f1"]
+[ext_resource type="Texture2D" uid="uid://befrpcfw3y556" path="res://Assets/PokeAmie.png" id="2_8saeu"]
+[ext_resource type="Texture2D" uid="uid://ci36wo608ajm5" path="res://Assets/WuschelHead6.png" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://dtjbbp2xteca2" path="res://Assets/WuschelHead4.png" id="4_df05h"]
+
+[sub_resource type="Animation" id="Animation_ghw46"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WuschelHead6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(255.99997, -71.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WuschelHead6:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.28489938]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WuschelHead4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-240, -320)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WuschelHead4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.336255]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Title:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Title:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.13765337]
+}
+
+[sub_resource type="Animation" id="Animation_df05h"]
+resource_name = "new_animation"
+length = 1.9333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WuschelHead6:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9166666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(255.99997, -71.99997), Vector2(256, -104)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WuschelHead6:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.28489938, -0.27585682]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WuschelHead4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-240, -320), Vector2(-239.99997, -384.00003)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WuschelHead4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.336255, 0.36813974]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Title:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13765337, 0.2078455]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8um5k"]
+_data = {
+&"RESET": SubResource("Animation_ghw46"),
+&"new_animation": SubResource("Animation_df05h")
+}
+
+[node name="MainMenu" type="Node2D" unique_id=1567689135]
+script = ExtResource("1_853f1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2136193552]
+modulate = Color(0.6358334, 0.6358334, 0.6358334, 1)
+texture = ExtResource("2_8saeu")
+
+[node name="StartButton" type="Button" parent="." unique_id=56591079]
+offset_left = -216.0
+offset_top = 64.0
+offset_right = 216.0
+offset_bottom = 176.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Start Game"
+
+[node name="CreditButton" type="Button" parent="." unique_id=285865127]
+offset_left = -160.0
+offset_top = 192.0
+offset_right = 160.0
+offset_bottom = 304.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Credits
+"
+
+[node name="EndButton" type="Button" parent="." unique_id=1225427040]
+offset_left = -216.0
+offset_top = 320.0
+offset_right = 216.0
+offset_bottom = 432.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "Quit Game
+"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1083549380]
+
+[node name="WuschelHead6" type="Sprite2D" parent="." unique_id=321783446]
+position = Vector2(255.99997, -71.99997)
+rotation = 0.28489938
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("3_ghw46")
+
+[node name="WuschelHead4" type="Sprite2D" parent="." unique_id=1401646243]
+position = Vector2(-240, -320)
+rotation = -0.336255
+texture = ExtResource("4_df05h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=959883085]
+libraries/ = SubResource("AnimationLibrary_8um5k")
+autoplay = &"new_animation"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1421847865]
+offset_left = -264.0
+offset_top = -368.0
+offset_right = 264.0
+offset_bottom = -56.0
+rotation = -0.13765337
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[rainbow freq=0.3]What do you want from me Goddamnit "
+horizontal_alignment = 1
